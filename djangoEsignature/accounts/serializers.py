@@ -17,6 +17,11 @@ class UserRegisterSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('password must match')
         return data
 
+class UserLoginSerializer(serializers.Serializer):
+    username = serializers.CharField(required=True)
+    password = serializers.CharField(write_only=True, required=True)
+
+
 
 
 

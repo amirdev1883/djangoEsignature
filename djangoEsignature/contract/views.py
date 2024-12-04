@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.contrib.auth.models import User
-# from .serializers import 
+from .serializers import MessageEmailsSerializer
 from rest_framework import status
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
@@ -13,10 +13,10 @@ from drf_spectacular.utils import extend_schema
 
 
 class ContractCreate(APIView):
-    # @extend_schema(
-    #     request=UserRegisterSerializer,
-    #     responses=UserRegisterSerializer,
-    # )
+    @extend_schema(
+        request=MessageEmailsSerializer,
+        responses=MessageEmailsSerializer,
+    )
     # def post(self, request):
     #     ser_data = UserRegisterSerializer(data=request.POST)
     #     if ser_data.is_valid():

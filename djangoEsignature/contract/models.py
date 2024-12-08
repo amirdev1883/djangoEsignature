@@ -9,10 +9,13 @@ class Contract(models.Model):
 
     def __str__(self) -> str:
         return f'{self.user.username} - {self.text}'
-    
-    
-class EmailContract(models.Model):
-    contract = models.OneToOneField(Contract, on_delete=models.CASCADE, related_name='emails')
+
+
+class UsersInfo(models.Model):
+    email = models.EmailField()
     fullname = models.CharField(max_length=100)
 
-
+        
+class RecepintContract(models.Model):
+    contract = models.OneToOneField(Contract, on_delete=models.CASCADE, related_name='emails')
+    user = models.ForeignKey(UsersInfo, on_delete=models.CASCADE, related_name='')

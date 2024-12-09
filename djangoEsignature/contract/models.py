@@ -16,6 +16,6 @@ class UsersInfo(models.Model):
     fullname = models.CharField(max_length=100)
 
         
-class RecepintContract(models.Model):
+class RecepientContract(models.Model):
     contract = models.OneToOneField(Contract, on_delete=models.CASCADE, related_name='emails')
-    user = models.ForeignKey(UsersInfo, on_delete=models.CASCADE, related_name='')
+    recepient = models.ForeignKey(UsersInfo, on_delete=models.CASCADE, related_name='')

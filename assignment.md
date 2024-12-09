@@ -5,7 +5,7 @@
 The objective of this assignment is to develop a small Django application that integrates with a 3rd party
 API in order to handle the process of creating, signing, and storing digitally managed agreements.
 
-## 3rd Party API Information
+### 3rd Party API Information
 
 * The service provider is called Docusign, it provides solutions for drafting contracts and
     sending them to the signing parties to collect digital signatures
@@ -21,11 +21,11 @@ to/code-launchers/
 ▪ The direct Git Repo link:
 • https://github.com/docusign/code-examples-python
 
-## Tasks at hand
+### Tasks at hand
 
-### Django App: Contract Signing Platform
+#### Django App: Contract Signing Platform
 
-## Brief Description of Tasks
+### Brief Description of Tasks
 The objective is to create a Django app that enables a user to register, log in, and sign a pre-defined contract. The contract will have two signing parties:
 - The first party is the user who logs in and signs the contract.
 - The second party is invited via email to sign the contract.

@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-class UsersInfoSerializer(serializers.Serializer):
+class ContractRecepientsSerializers(serializers.Serializer):
     text = serializers.CharField(
         max_length=500, 
         allow_blank=False 
